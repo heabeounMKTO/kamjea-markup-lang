@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+        <title>Khmer Markup Lang Editor 0.0</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+           <div class="left"> 
+           <label>Khmer Markup Language</label>
+           <textarea id="KML-code" onkeyup = "run()"></textarea>
+           
+           <label>CSS</label>
+           <textarea id="CSS-code" onkeyup = "run()"></textarea>
+           
+           <label>JS</label>
+           <textarea id="JS-code" onkeyup = "run()"></textarea>
+        </div>
+        
+        <div class="right">
+            <iframe id="output">
+            
+            </iframe>
+        </div>
+    </div>
+    <script>
+        function run(){
+            const page = window.open("kml_o.html")
+            let kmlCode = document.getElementById("KML-code").value;
+            let cssCode = document.getElementById("CSS-code").value;
+            let Code = document.getElementById("JS-code").value;
+            let output = document.getElementById("output");
+            
+
+            output.contentDocument.body.innerHTML = kmlCode;
+        }
+
+    </script>    
+
+
+    </body>
+</html>
